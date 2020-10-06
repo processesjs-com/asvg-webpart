@@ -8,8 +8,7 @@ import { escape } from '@microsoft/sp-lodash-subset';
 
 import styles from './AsvgWebPart.module.scss';
 import * as strings from 'AsvgWebPartStrings';
-// @ts-ignore
-import ASVG from 'advance-svg';
+import ASVG from 'advance-svg'; // @ts-ignore
 
 export interface IAsvgWebPartProps {
   page: string;
