@@ -19,7 +19,7 @@
     "@microsoft/sp-webpart-base": "1.10.0",
     "@types/es6-promise": "0.0.33",
     "@types/webpack-env": "1.13.1",
-    "advance-svg": "^1.2.3"
+    "advance-svg": "^1.2.4"
   },
   "devDependencies": {
     "@microsoft/sp-build-web": "1.10.0",
