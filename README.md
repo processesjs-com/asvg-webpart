@@ -1,23 +1,44 @@
-## asvg-webpart
+# Asvg-Webpart
 
-This is a SharePoint (Web Part) implementation of Advance SVG library. You can find the library on GitHub and see a Demo on:
-https://github.com/processesjs-com/advance-svg
-https://d2a8hhqmsel69m.cloudfront.net/
+This is a SharePoint (Web Part) implementation of Advance-SVG library. 
 
-The implementation requres installing the advance-svg library form NPM.
-```
-npm install advance-svg
-``` 
+## Installation
+
+The simplest way is to copy asvg-webpart.sppkg file form \sharepoint\solution into the SharePoint Application Catalog.
+
+For detail instructions, please see https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/serve-your-web-part-in-a-sharepoint-page
+
+## Advance-SVG demo and source code
+
+GitHub: https://github.com/processesjs-com/advance-svg
+
+Demo and CDN: https://d2a8hhqmsel69m.cloudfront.net/
+
+
+## Asvg-Webpart explained
 
 It makes minimum code changes to the default Web Part code, as illustaretd below:
 ```
+/* advance-svg is ES6 Class and therefore will ignore TS */
 import ASVG from 'advance-svg'; // @ts-ignore
 
+export interface IAsvgWebPartProps {
+  page: string;
+  filelocation:string;
+}
+
 export default class AsvgWebPart extends BaseClientSideWebPart <IAsvgWebPartProps> {
+  public asvg: ASVG;
+/* Overwrite the default advance-svg library error handling function to avoid the default Alarm messages when entering the Web Part properties */
+  public userErrorHandler: Function;
 
   constructor(){
     super();
-    window.addEventListener('resize', ASVG.updateAll );
+
+    this.userErrorHandler = ( err: ErrorEvent ) => {};
+    this.asvg = new ASVG({ userErrorHandler: this.userErrorHandler });
+
+    window.addEventListener('resize', this.asvg.updateAll );
   }
 
   public render(): void {
@@ -27,7 +48,7 @@ export default class AsvgWebPart extends BaseClientSideWebPart <IAsvgWebPartProp
       data-asvg-filelocation="${escape(this.properties.filelocation)}"
       style="width:100%;" >
     </div>`;
-    ASVG.updateElement( this.domElement.querySelector('[data-asvg]')  );
+    this.asvg.updateElement( this.domElement.querySelector('[data-asvg]')  );
   }
   ...
 ```

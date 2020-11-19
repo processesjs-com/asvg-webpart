@@ -1,0 +1,66 @@
+{
+  "id": "364549a1-94e5-4200-b85a-7b0200b67f64",
+  "alias": "AsvgWebPart",
+  "componentType": "WebPart",
+  "version": "0.0.1",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "supportedHosts": [
+    "SharePointWebPart"
+  ],
+  "preconfiguredEntries": [
+    {
+      "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
+      "group": {
+        "default": "Other"
+      },
+      "title": {
+        "default": "Asvg"
+      },
+      "description": {
+        "default": "Advance SVG"
+      },
+      "officeFabricIconFontName": "Page",
+      "properties": {
+        "description": "Asvg"
+      }
+    }
+  ],
+  "loaderConfig": {
+    "entryModuleId": "asvg-web-part",
+    "internalModuleBaseUrls": [
+      "https://localhost:4321/"
+    ],
+    "scriptResources": {
+      "asvg-web-part": {
+        "type": "path",
+        "path": "dist/asvg-web-part.js"
+      },
+      "AsvgWebPartStrings": {
+        "defaultPath": "lib/webparts/asvg/loc/en-us.js",
+        "type": "localizedPath",
+        "paths": {}
+      },
+      "@microsoft/sp-property-pane": {
+        "type": "component",
+        "version": "1.10.0",
+        "id": "f9e737b7-f0df-4597-ba8c-3060f82380db"
+      },
+      "@microsoft/sp-lodash-subset": {
+        "type": "component",
+        "version": "1.10.0",
+        "id": "73e1dc6c-8441-42cc-ad47-4bd3659f8a3a"
+      },
+      "@microsoft/sp-core-library": {
+        "type": "component",
+        "version": "1.10.0",
+        "id": "7263c7d0-1d6a-45ec-8d85-d4d1d234171b"
+      },
+      "@microsoft/sp-webpart-base": {
+        "type": "component",
+        "version": "1.10.0",
+        "id": "974a7777-0990-4136-8fa6-95d80114c2e0"
+      }
+    }
+  }
+}
