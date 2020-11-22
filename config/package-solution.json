@@ -3,7 +3,7 @@
   "solution": {
     "name": "asvg-webpart-client-side-solution",
     "id": "1456cf38-ae6c-49cd-9d2f-f5c53ebb235c",
-    "version": "1.0.1.0",
+    "version": "1.0.1.1",
     "includeClientSideAssets": true,
     "isDomainIsolated": false
   },
