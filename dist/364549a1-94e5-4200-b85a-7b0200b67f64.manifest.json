@@ -2,7 +2,7 @@
   "id": "364549a1-94e5-4200-b85a-7b0200b67f64",
   "alias": "AsvgWebPart",
   "componentType": "WebPart",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "manifestVersion": 2,
   "requiresCustomScript": false,
   "supportedHosts": [
@@ -38,8 +38,7 @@
       },
       "AsvgWebPartStrings": {
         "defaultPath": "lib/webparts/asvg/loc/en-us.js",
-        "type": "localizedPath",
-        "paths": {}
+        "type": "localizedPath"
       },
       "@microsoft/sp-property-pane": {
         "type": "component",
