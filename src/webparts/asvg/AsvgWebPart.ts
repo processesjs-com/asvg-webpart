@@ -27,9 +27,14 @@ export default class AsvgWebPart extends BaseClientSideWebPart <IAsvgWebPartProp
     super();
 
     this.userErrorHandler = ( err: ErrorEvent ) => {};
-    this.asvg = new ASVG({ userErrorHandler: this.userErrorHandler });
 
-    window.addEventListener('resize', this.asvg.updateAll );
+    if( !window['asvg'] ){
+      window['asvg'] = new ASVG({
+        defaultFileLocation: 'https://isosolutionsinfo.sharepoint.com/SVG/', // Replace this location with your tenant!
+        userErrorHandler: this.userErrorHandler
+      });
+      window.addEventListener('resize', window['asvg'].updateAll );
+    }
   }
 
   public render(): void {
@@ -39,7 +44,7 @@ export default class AsvgWebPart extends BaseClientSideWebPart <IAsvgWebPartProp
       data-asvg-filelocation="${escape(this.properties.filelocation)}"
       style="width:100%;" >
     </div>`;
-    this.asvg.updateElement( this.domElement.querySelector('[data-asvg]')  );
+    window['asvg'].updateElement( this.domElement.querySelector('[data-asvg]')  );
   }
 
   protected get dataVersion(): Version {
