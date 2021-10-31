@@ -28,3 +28,8 @@ gulp bundle --ship
 gulp package-solution --ship
 ```
 
+### Installing and using Asvg Web Part
+
+Shortly, copy asvg-webpart\sharepoint\solution\asvg-webpart.sppkg in your tenant App Store site and use the Asvg Web Part in your tenant.
+For information about development and installation of Web Parts visit:
+https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/overview-client-side-web-parts 
