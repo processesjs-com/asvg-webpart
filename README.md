@@ -1,6 +1,6 @@
 # Asvg-Webpart
 
-This SharePoint Webpart is a wrapper of the Advance-SVG library. 
+This SharePoint Webpart is a wrapper of the **Advance-SVG** library. 
 
 ## Quick installation
 Watch the video presentation in https://youtu.be/MRJSkr_WX8c
@@ -18,7 +18,7 @@ GitHub: https://github.com/processesjs-com/advance-svg
 To build it from the source code, please familiarise with the documentation in the folowing location:
 https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/overview-client-side-web-parts 
 
-### Short commands to build the Webpart
+### Short commands to build
 
 ```bash
 git clone https://github.com/processesjs-com/asvg-webpart.git
