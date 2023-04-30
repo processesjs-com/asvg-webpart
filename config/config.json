@@ -2,17 +2,17 @@
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
   "version": "2.0",
   "bundles": {
-    "asvg-web-part": {
+    "asvg-2-web-part": {
       "components": [
         {
-          "entrypoint": "./lib/webparts/asvg/AsvgWebPart.js",
-          "manifest": "./src/webparts/asvg/AsvgWebPart.manifest.json"
+          "entrypoint": "./lib/webparts/asvg2/Asvg2WebPart.js",
+          "manifest": "./src/webparts/asvg2/Asvg2WebPart.manifest.json"
         }
       ]
     }
   },
   "externals": {},
   "localizedResources": {
-    "AsvgWebPartStrings": "lib/webparts/asvg/loc/{locale}.js"
+    "Asvg2WebPartStrings": "lib/webparts/asvg2/loc/{locale}.js"
   }
 }
