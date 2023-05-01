@@ -4,7 +4,9 @@ This SharePoint Webpart is a wrapper of the **Advance-SVG** library.
 
 ## Quick installation
 Watch the video presentation in https://youtu.be/vi1xXfq_EgY
+
 Copy **asvg-webpart\sharepoint\solution\asvg-webpart-2.sppkg** in your tenant App Catalogue. 
+
 It's recommended to create a folder named **SVG** in each site where you will use the Webpart and copy **page1.svg** and **page2.svg** from the source code SVG folder.
 
 ## Advance-SVG documentation, demo and source code
